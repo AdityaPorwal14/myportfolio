@@ -86,7 +86,7 @@ const skills = [
       <img
         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Adobe-Photoshop-Logo-JxoI5ZszWRso6rlsINjcYhZ9yHPIrQ.png"
         alt="Adobe Photoshop"
-        className="w-6 h-6 transition-all duration-300 filter grayscale group-hover:grayscale-0 object-contain"
+        className="w-12 h-12 transition-all duration-300 filter grayscale group-hover:grayscale-0 object-contain"
       />
     ),
   },

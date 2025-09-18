@@ -40,7 +40,7 @@ export function Contact() {
         <Button
           variant="outline"
           size="sm"
-          className="flex items-center gap-2 hover:bg-blue-50 hover:border-blue-300 dark:hover:bg-blue-950 transition-all duration-300 bg-transparent"
+          className="flex items-center gap-2 hover:bg-blue-500/20 hover:text-blue-700 hover:border-blue-300 dark:hover:bg-blue-500/20 dark:hover:text-blue-400 dark:hover:border-blue-400 transition-all duration-500 bg-transparent"
           asChild
         >
           <a href="https://www.linkedin.com/in/adityaporwal14/" target="_blank" rel="noopener noreferrer">
@@ -52,7 +52,7 @@ export function Contact() {
         <Button
           variant="outline"
           size="sm"
-          className="flex items-center gap-2 hover:bg-gray-50 hover:border-gray-400 dark:hover:bg-gray-900 transition-all duration-300 bg-transparent"
+          className="flex items-center gap-2 hover:bg-gray-900/20 hover:text-gray-900 hover:border-gray-400 dark:hover:bg-gray-100/20 dark:hover:text-gray-100 dark:hover:border-gray-300 transition-all duration-500 bg-transparent"
           asChild
         >
           <a href="https://github.com/AdityaPorwal14" target="_blank" rel="noopener noreferrer">
@@ -64,7 +64,7 @@ export function Contact() {
         <Button
           variant="outline"
           size="sm"
-          className="flex items-center gap-2 hover:bg-orange-50 hover:border-orange-300 dark:hover:bg-orange-950 transition-all duration-300 bg-transparent"
+          className="flex items-center gap-2 hover:bg-red-500/20 hover:text-red-700 hover:border-red-300 dark:hover:bg-red-500/20 dark:hover:text-red-400 dark:hover:border-red-400 transition-all duration-500 bg-transparent"
           asChild
         >
           <a href="https://leetcode.com/u/AdityaPorwal14/" target="_blank" rel="noopener noreferrer">
@@ -78,7 +78,7 @@ export function Contact() {
         <Button
           variant="outline"
           size="sm"
-          className="flex items-center gap-2 hover:bg-green-50 hover:border-green-300 dark:hover:bg-green-950 transition-all duration-300 bg-transparent"
+          className="flex items-center gap-2 hover:bg-green-500/20 hover:text-green-700 hover:border-green-300 dark:hover:bg-green-500/20 dark:hover:text-green-400 dark:hover:border-green-400 transition-all duration-500 bg-transparent"
           asChild
         >
           <a href="mailto:aadityporwal96@gmail.com">

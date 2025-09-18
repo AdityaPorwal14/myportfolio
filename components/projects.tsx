@@ -1,11 +1,8 @@
 "use client"
 
-import type React from "react"
-
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { ExternalLink, Github } from "lucide-react"
-import { useState } from "react"
 
 const projects = [
   {
@@ -26,25 +23,6 @@ const projects = [
 ]
 
 export function Projects() {
-  const [buttonHovers, setButtonHovers] = useState<{ [key: string]: { x: number; y: number; isHovered: boolean } }>({})
-
-  const handleMouseMove = (e: React.MouseEvent, buttonId: string) => {
-    const rect = e.currentTarget.getBoundingClientRect()
-    const x = e.clientX - rect.left
-    const y = e.clientY - rect.top
-    setButtonHovers((prev) => ({
-      ...prev,
-      [buttonId]: { x, y, isHovered: true },
-    }))
-  }
-
-  const handleMouseLeave = (buttonId: string) => {
-    setButtonHovers((prev) => ({
-      ...prev,
-      [buttonId]: { x: 0, y: 0, isHovered: false },
-    }))
-  }
-
   return (
     <section className="py-8">
       <motion.h2
@@ -93,49 +71,23 @@ export function Projects() {
                   <div className="flex items-start gap-3 flex-shrink-0">
                     <button
                       disabled={!project.liveUrl}
-                      className={`relative overflow-hidden px-3 py-1.5 text-xs rounded-full transition-all duration-300 flex items-center gap-1.5 ${
+                      className={`px-3 py-1.5 text-xs rounded-full transition-all duration-500 flex items-center gap-1.5 ${
                         project.liveUrl
-                          ? "bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black cursor-pointer"
+                          ? "bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-900 hover:text-white dark:hover:bg-gray-100 dark:hover:text-gray-900 cursor-pointer"
                           : "bg-gray-100 dark:bg-gray-800 text-gray-400 dark:text-gray-600 cursor-not-allowed opacity-50"
                       }`}
-                      onMouseMove={(e) => project.liveUrl && handleMouseMove(e, `live-${index}`)}
-                      onMouseLeave={() => handleMouseLeave(`live-${index}`)}
                       onClick={() => project.liveUrl && window.open(project.liveUrl, "_blank")}
                     >
-                      {project.liveUrl && buttonHovers[`live-${index}`]?.isHovered && (
-                        <div
-                          className="absolute w-6 h-6 bg-black dark:bg-white rounded-full pointer-events-none transition-all duration-200"
-                          style={{
-                            left: buttonHovers[`live-${index}`].x - 12,
-                            top: buttonHovers[`live-${index}`].y - 12,
-                          }}
-                        />
-                      )}
-                      <span className="relative z-10 flex items-center gap-1.5">
-                        <ExternalLink className="w-3 h-3" />
-                        View Live
-                      </span>
+                      <ExternalLink className="w-3 h-3" />
+                      View Live
                     </button>
 
                     <button
-                      className="relative overflow-hidden px-3 py-1.5 text-xs rounded-full bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 flex items-center gap-1.5 cursor-pointer"
-                      onMouseMove={(e) => handleMouseMove(e, `github-${index}`)}
-                      onMouseLeave={() => handleMouseLeave(`github-${index}`)}
+                      className="px-3 py-1.5 text-xs rounded-full bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-900 hover:text-white dark:hover:bg-gray-100 dark:hover:text-gray-900 transition-all duration-500 flex items-center gap-1.5 cursor-pointer"
                       onClick={() => window.open(project.githubUrl, "_blank")}
                     >
-                      {buttonHovers[`github-${index}`]?.isHovered && (
-                        <div
-                          className="absolute w-6 h-6 bg-black dark:bg-white rounded-full pointer-events-none transition-all duration-200"
-                          style={{
-                            left: buttonHovers[`github-${index}`].x - 12,
-                            top: buttonHovers[`github-${index}`].y - 12,
-                          }}
-                        />
-                      )}
-                      <span className="relative z-10 flex items-center gap-1.5">
-                        <Github className="w-3 h-3" />
-                        GitHub
-                      </span>
+                      <Github className="w-3 h-3" />
+                      GitHub
                     </button>
                   </div>
                 </div>
