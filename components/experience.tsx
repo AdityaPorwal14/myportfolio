@@ -41,7 +41,10 @@ export function Experience() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 space-y-6 hover:bg-white dark:hover:bg-gray-900 hover:shadow-md transition-all duration-300"
+
+          className="relative rounded-xl bg-zinc-50/40 ring-1 ring-zinc-200/50 
+          transition-all duration-200 ring-inset hover:bg-zinc-100/50 
+          dark:bg-zinc-950/40 dark:ring-zinc-800/45 dark:hover:bg-zinc-900/50 p-6 space-y-6"
         >
           {experiences.map((exp, index) => (
             <div key={index} className={`${index !== experiences.length - 1 ? "pb-6 border-b border-border" : ""}`}>

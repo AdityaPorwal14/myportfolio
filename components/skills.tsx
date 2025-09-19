@@ -26,13 +26,14 @@ const skills = [
     ),
   },
   {
-    name: "JavaScript",
-    icon: (
-      <div className="w-6 h-6 bg-yellow-400 rounded-sm flex items-center justify-center transition-all duration-300 filter grayscale group-hover:grayscale-0">
-        <span className="text-black font-bold text-xs">JS</span>
-      </div>
-    ),
-  },
+  name: "JavaScript",
+  icon: (
+    <div className="w-6 h-6 bg-yellow-400 flex items-center justify-center transition-all duration-300 filter grayscale group-hover:grayscale-0">
+      <span className="text-black font-bold text-xs">JS</span>
+    </div>
+  ),
+},
+
   {
     name: "React",
     icon: (
@@ -80,16 +81,22 @@ const skills = [
       </svg>
     ),
   },
-  {
-    name: "Photoshop",
-    icon: (
+{
+  name: "Photoshop",
+  icon: (
+    <div className="w-6 h-6 flex items-center justify-center transition-all duration-300 filter grayscale group-hover:grayscale-0">
       <img
         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Adobe-Photoshop-Logo-JxoI5ZszWRso6rlsINjcYhZ9yHPIrQ.png"
         alt="Adobe Photoshop"
-        className="w-12 h-12 transition-all duration-300 filter grayscale group-hover:grayscale-0 object-contain"
+        className="w-6 h-6 object-contain scale-125"
       />
-    ),
-  },
+    </div>
+  ),
+},
+
+
+
+
 ]
 
 export function Skills() {
@@ -116,7 +123,10 @@ export function Skills() {
               viewport={{ once: true }}
               className="group cursor-pointer"
             >
-              <div className="w-24 h-24 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:bg-white dark:hover:bg-gray-900 hover:shadow-md hover:border-gray-300 dark:hover:border-gray-600 flex flex-col items-center justify-center gap-3 transition-all duration-300 p-4">
+              <div className="w-24 h-24 rounded-xl relative bg-zinc-50/40 ring-1 ring-zinc-200/50 
+              hover:bg-zinc-100/50 dark:bg-zinc-950/40 dark:ring-zinc-800/45 dark:hover:bg-zinc-900/50 
+              flex flex-col items-center justify-center gap-3 transition-all duration-200 p-4 ring-inset">
+
                 <div className="flex-shrink-0">{skill.icon}</div>
                 <span className="text-xs font-medium text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-300 text-center leading-tight">
                   {skill.name}
